@@ -52,9 +52,12 @@ bool should_terminate_num_word(uint16_t keycode, const keyrecord_t *record) {
         // a couple more ranges, but I believe "explicit is better than
         // implicit"
         case KC_1 ... KC_0:
-        case KC_EQL:
         case KC_SCLN:
         case KC_MINS:
+        case KC_PLUS:
+        case KC_ASTR:
+        case KC_EQL:
+        case KC_SLSH:
         case KC_DOT:
 
         // Numpad keycodes
