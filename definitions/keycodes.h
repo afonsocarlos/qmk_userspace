@@ -31,9 +31,14 @@ enum custom_keycodes {
     KC_EURO,  // € direct key
 
     // Composite keys
-    KC_DCLN, // Double colon
-    KC_FARW, // Fat Arrow
-    KC_TARW, // Thin Arrow
+    KC_LEQT, // <= Less than or equal to
+    KC_DEQL, // == Double equals to
+    KC_TEQL, // === Triple equals to
+    KC_NEQL, // != Not equals to
+    KC_GEQT, // >= Greater than or equal to
+    KC_TARW, // -> Thin Arrow
+    KC_FARW, // => Fat Arrow
+    KC_DCLN, // :: Double colon
 
     // Combo codes
     MC_DELWRD,

@@ -149,9 +149,39 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
                 return false;
             }
             break;
-        case KC_DCLN:
+        case KC_LEQT:
             if (record->event.pressed) {
-                SEND_STRING("::");
+                SEND_STRING("<=");
+                return false;
+            }
+            break;
+        case HOME_DE:
+            if (record->tap.count && record->event.pressed) {
+                SEND_STRING("==");
+                return false;
+            }
+            break;
+        case HOME_TE:
+            if (record->tap.count && record->event.pressed) {
+                SEND_STRING("===");
+                return false;
+            }
+            break;
+        case HOME_NE:
+            if (record->tap.count && record->event.pressed) {
+                SEND_STRING("!=");
+                return false;
+            }
+            break;
+        case HOME_GE:
+            if (record->tap.count && record->event.pressed) {
+                SEND_STRING(">=");
+                return false;
+            }
+            break;
+        case KC_TARW:
+            if (record->event.pressed) {
+                SEND_STRING("->");
                 return false;
             }
             break;
@@ -161,9 +191,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
                 return false;
             }
             break;
-        case KC_TARW:
+        case KC_DCLN:
             if (record->event.pressed) {
-                SEND_STRING("->");
+                SEND_STRING("::");
                 return false;
             }
             break;
