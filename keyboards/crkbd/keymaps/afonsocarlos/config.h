@@ -51,13 +51,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #undef MOUSEKEY_INTERVAL
 #define MOUSEKEY_INTERVAL       16
 #undef MOUSEKEY_MOVE_DELTA
-#define MOUSEKEY_MOVE_DELTA     12
+#define MOUSEKEY_MOVE_DELTA     6
 #undef MOUSEKEY_WHEEL_DELAY
 #define MOUSEKEY_WHEEL_DELAY    0
 #undef MOUSEKEY_MAX_SPEED
-#define MOUSEKEY_MAX_SPEED      2
+#define MOUSEKEY_MAX_SPEED      3
 #undef MOUSEKEY_TIME_TO_MAX
-#define MOUSEKEY_TIME_TO_MAX    64
+#define MOUSEKEY_TIME_TO_MAX    30
 
 #define RGBLIGHT_LAYERS
 #define RGBLIGHT_DEFAULT_HUE 180
