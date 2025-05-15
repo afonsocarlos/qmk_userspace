@@ -22,6 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "quantum.h"
 #include QMK_KEYBOARD_H
 
+#include "afonsocarlos.h"
 #include "definitions/keycodes.h"
 #include "features/accents.h"
 #include "features/caps_line.h"
@@ -29,8 +30,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "features/os_toggle.h"
 #include "features/shortcuts.h"
 #include "features/sm_td.h"
-#include "keymap.h"
-#include "layers.h"
 
 #define HOME_CTRL is_macos() ? KC_LGUI : KC_LCTL
 #define HOME_GUI is_macos() ? KC_LCTL : KC_LGUI
