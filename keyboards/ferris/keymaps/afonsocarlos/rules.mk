@@ -3,6 +3,7 @@ CONVERT_TO = rp2040_ce
 
 SRC += features/accents.c
 SRC += features/caps_line.c
+SRC += features/key_repeat.c
 SRC += features/num_word.c
 SRC += features/os_toggle.c
 SRC += features/shortcuts.c

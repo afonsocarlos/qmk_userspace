@@ -26,6 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "definitions/keycodes.h"
 #include "features/accents.h"
 #include "features/caps_line.h"
+#include "features/key_repeat.h"
 #include "features/num_word.h"
 #include "features/os_toggle.h"
 #include "features/shortcuts.h"
@@ -67,11 +68,19 @@ uint32_t get_smtd_timeout(uint16_t keycode, smtd_timeout timeout) {
     return get_smtd_timeout_default(timeout);
 }
 
+
+void on_key_repeat_default_action(uint16_t keycode, keyrecord_t *record) {
+    if (is_num_word_enabled()) {
+        toggle_num_word();
+    }
+}
+
 __attribute__((weak)) bool process_record_keymap(uint16_t keycode, keyrecord_t* record) {
     return true;
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+    if (!process_key_repeat(keycode, record)) { return false; } // TODO: Move this call to the end of this block after smtd 0.5 update
     if (!process_smtd(keycode, record)) { return false; }
     if (!process_accents(keycode, record)) { return false; }
     if (!process_shortcuts(keycode, record)) { return false; }
@@ -137,12 +146,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
         case CKC_W9:
             if (record->tap.count && record->event.pressed) {
                 tap_code16(G(KC_9));
-                return false;
-            }
-            break;
-        case LTNUMWORD:
-            if (record->tap.count && record->event.pressed) {
-                enable_num_word();
                 return false;
             }
             break;
