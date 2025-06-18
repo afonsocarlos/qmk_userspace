@@ -24,9 +24,11 @@ enum custom_keycodes {
     KC_CEDL, // ç direct key
     KC_ECUT, // é direct key
     KC_ECIR, // ê direct key
+    KC_ICUT, // í direct key
     KC_OTIL, // õ direct key
     KC_OCUT, // ó direct key
     KC_OCIR, // ô direct key
+    KC_UCUT, // ú direct key
     KC_CENT,  // ¢ direct key
     KC_EURO,  // € direct key
 
@@ -42,6 +44,7 @@ enum custom_keycodes {
 
     // Combo codes
     MC_DELWRD,
+    MC_DELNWRD,
     MC_CLWIN,
     MC_LOCK,
     MC_CUT,
