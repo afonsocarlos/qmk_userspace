@@ -770,32 +770,36 @@ bool process_smtd(uint16_t keycode, keyrecord_t *record) {
 #define SMTD_MTE4(macro_key, tap_key, mod, threshold) SMTD_MTE5(macro_key, tap_key, mod, threshold, true)
 #define SMTD_LT4(macro_key, tap_key, layer, threshold) SMTD_LT5(macro_key, tap_key, layer, threshold, true)
 
-#define SMTD_MT5(macro_key, tap_key, mod, threshold, use_cl)  \
-    case macro_key: {                                         \
-        switch (action) {                                     \
-            case SMTD_ACTION_TOUCH:                           \
-                break;                                        \
-            case SMTD_ACTION_TAP:                             \
-                SMTD_TAP_16(use_cl, tap_key);                 \
-                break;                                        \
-            case SMTD_ACTION_HOLD:                            \
-                if (tap_count < threshold) {                  \
-                    register_mods(MOD_BIT(mod));              \
-                    caps_word_off();                          \
-                } else {                                      \
-                    SMTD_REGISTER_16(use_cl, tap_key);        \
-                }                                             \
-                break;                                        \
-            case SMTD_ACTION_RELEASE:                         \
-                if (tap_count < threshold) {                  \
-                    unregister_mods(MOD_BIT(mod));            \
-                } else {                                      \
-                    SMTD_UNREGISTER_16(use_cl, tap_key);      \
-                    send_keyboard_report();                   \
-                }                                             \
-                break;                                        \
-        }                                                     \
-        break;                                                \
+#define SMTD_MT5(macro_key, tap_key, mod, threshold, use_cl) \
+    case macro_key: {                                        \
+        switch (action) {                                    \
+            case SMTD_ACTION_TOUCH:                          \
+                break;                                       \
+            case SMTD_ACTION_TAP:                            \
+                if (leader_sequence_active()) {              \
+                    leader_sequence_add(tap_key);            \
+                } else {                                     \
+                    SMTD_TAP_16(use_cl, tap_key);            \
+                }                                            \
+                break;                                       \
+            case SMTD_ACTION_HOLD:                           \
+                if (tap_count < threshold) {                 \
+                    register_mods(MOD_BIT(mod));             \
+                    caps_word_off();                         \
+                } else {                                     \
+                    SMTD_REGISTER_16(use_cl, tap_key);       \
+                }                                            \
+                break;                                       \
+            case SMTD_ACTION_RELEASE:                        \
+                if (tap_count < threshold) {                 \
+                    unregister_mods(MOD_BIT(mod));           \
+                } else {                                     \
+                    SMTD_UNREGISTER_16(use_cl, tap_key);     \
+                    send_keyboard_report();                  \
+                }                                            \
+                break;                                       \
+        }                                                    \
+        break;                                               \
     }
 
 #define SMTD_MTE5(macro_key, tap_key, mod, threshold, use_cl) \
