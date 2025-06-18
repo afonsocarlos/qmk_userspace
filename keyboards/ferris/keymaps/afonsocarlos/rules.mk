@@ -15,6 +15,7 @@ COMBO_ENABLE         = yes
 DEFERRED_EXEC_ENABLE = yes
 KEY_OVERRIDE_ENABLE  = yes
 LAYER_LOCK_ENABLE    = yes
+LEADER_ENABLE        = yes
 LTO_ENABLE           = yes
 MAGIC_ENABLE         = yes
 MOUSEKEY_ENABLE      = yes

@@ -1,0 +1,17 @@
+/*    SEQUENCE ACTION , TRIGGER KEYS    */
+
+LEADER(process_accent(KC_ACUT), KC_A) // á direct key
+LEADER(process_accent(KC_ACIR), KC_A, KC_G) // â direct key
+LEADER(process_accent(KC_ATIL), KC_A, KC_N) // ã direct key
+LEADER(process_accent(KC_CEDL), KC_C)       // ç direct key
+LEADER(process_accent(KC_ECUT), KC_E) // é direct key
+LEADER(process_accent(KC_ECIR), KC_E, KC_G) // ê direct key
+LEADER(process_accent(KC_ICUT), KC_I) // í direct key
+LEADER(process_accent(KC_OCUT), KC_O) // ó direct key
+LEADER(process_accent(KC_OCIR), KC_O, KC_G) // ô direct key
+LEADER(process_accent(KC_OTIL), KC_O, KC_N) // õ direct key
+LEADER(process_accent(KC_UCUT), KC_U) // ú direct key
+LEADER(process_accent(KC_CENT), KC_C, KC_E) // ¢ direct key
+LEADER(process_accent(KC_EURO), KC_E, KC_U) // € direct key
+LEADER(process_accent(KC_CHECK), KC_O, KC_K) // ✓ direct key
+LEADER(process_accent(KC_PI), KC_P, KC_I) // π direct key

@@ -18,19 +18,21 @@ enum custom_keycodes {
     SMTD_KEYCODES_END,
 
     // Accent keys
-    KC_ATIL, // ã direct key
-    KC_ACUT, // á direct key
-    KC_ACIR, // â direct key
-    KC_CEDL, // ç direct key
-    KC_ECUT, // é direct key
-    KC_ECIR, // ê direct key
-    KC_ICUT, // í direct key
-    KC_OTIL, // õ direct key
-    KC_OCUT, // ó direct key
-    KC_OCIR, // ô direct key
-    KC_UCUT, // ú direct key
+    KC_ATIL,  // ã direct key
+    KC_ACUT,  // á direct key
+    KC_ACIR,  // â direct key
+    KC_CEDL,  // ç direct key
+    KC_ECUT,  // é direct key
+    KC_ECIR,  // ê direct key
+    KC_ICUT,  // í direct key
+    KC_OTIL,  // õ direct key
+    KC_OCUT,  // ó direct key
+    KC_OCIR,  // ô direct key
+    KC_UCUT,  // ú direct key
     KC_CENT,  // ¢ direct key
     KC_EURO,  // € direct key
+    KC_CHECK, // ✓ direct key
+    KC_PI,    // π direct key
 
     // Composite keys
     KC_LEQT, // <= Less than or equal to
@@ -57,4 +59,3 @@ enum custom_keycodes {
     TG_MAC,
     TG_WIN,
 };
-

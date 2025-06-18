@@ -27,6 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "features/accents.h"
 #include "features/caps_line.h"
 #include "features/key_repeat.h"
+#include "features/leader_key.h"
 #include "features/num_word.h"
 #include "features/os_toggle.h"
 #include "features/shortcuts.h"
@@ -80,7 +81,6 @@ __attribute__((weak)) bool process_record_keymap(uint16_t keycode, keyrecord_t* 
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
     if (!process_key_repeat(keycode, record)) { return false; } // TODO: Move this call to the end of this block after smtd 0.5 update
     if (!process_smtd(keycode, record)) { return false; }
-    if (!process_accents(keycode, record)) { return false; }
     if (!process_shortcuts(keycode, record)) { return false; }
     if (!process_os_toggle(keycode, record)) { return false; }
     if (!process_caps_line(keycode, record)) { return false; }

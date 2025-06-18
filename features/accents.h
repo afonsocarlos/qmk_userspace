@@ -2,4 +2,4 @@
 
 #include "action.h"
 
-bool process_accents(uint16_t keycode, keyrecord_t *record);
+bool process_accent(uint16_t keycode);

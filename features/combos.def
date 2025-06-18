@@ -5,6 +5,7 @@ COMB(qwerty_layout_combo,    DF(_QWERTY),        KC_Q, KC_W, KC_F, KC_P)
 COMB(clwin_combo,            MC_CLWIN,           KC_Q, KC_W, KC_F)
 COMB(f12_combo,              KC_F12,             KC_Q, KC_W)
 COMB(fcrel_combo,            KC_ESC,             KC_W, KC_F)
+COMB(leader_key_combo,       QK_LEAD,            KC_F, KC_P)
 COMB(swapwin_combo,          KC_NO,              KC_P, KC_B)
 
 COMB(bspc_combo,             KC_BSPC,            KC_L, KC_U)
