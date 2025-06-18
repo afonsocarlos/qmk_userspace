@@ -70,9 +70,7 @@ uint32_t get_smtd_timeout(uint16_t keycode, smtd_timeout timeout) {
 
 
 void on_key_repeat_default_action(uint16_t keycode, keyrecord_t *record) {
-    if (is_num_word_enabled()) {
-        toggle_num_word();
-    }
+    toggle_num_word();
 }
 
 __attribute__((weak)) bool process_record_keymap(uint16_t keycode, keyrecord_t* record) {
