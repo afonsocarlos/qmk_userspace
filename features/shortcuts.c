@@ -43,6 +43,9 @@ bool process_shortcuts(uint16_t keycode, keyrecord_t *record) {
 
         // Delete word
         OS_REGISTER(MC_DELWRD, A(KC_BSPC), C(KC_BSPC))
+
+        // Delete next word
+        OS_REGISTER(MC_DELNWRD, A(KC_DEL), C(KC_DEL))
     }
 
     return true;
