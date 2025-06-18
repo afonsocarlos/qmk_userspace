@@ -10,7 +10,7 @@
 #define HOME_6 LSFT_T(KC_6)
 #define HOME_DE LSFT_T(KC_DEQL)
 #define HOME_TE RCTL_T(KC_TEQL)
-#define HOME_NE LALT_T(KC_NEQL)
+#define HOME_NE RALT_T(KC_NEQL)
 #define HOME_GE RGUI_T(KC_GEQT)
 #define HOME_F4 LALT_T(KC_F4)
 #define HOME_F5 LCTL_T(KC_F5)

@@ -46,7 +46,7 @@ void on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap_count) {
 
         SMTD_MT(HOME_N, KC_N, KC_RSFT, 2)
         SMTD_MT(HOME_E, KC_E, HOME_CTRL, 2)
-        SMTD_MT(HOME_I, KC_I, KC_RALT, 2)
+        SMTD_MT(HOME_I, KC_I, KC_LALT, 2)
         SMTD_MT(HOME_O, KC_O, HOME_GUI, 2)
     }
 }
