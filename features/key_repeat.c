@@ -78,10 +78,8 @@ bool process_key_repeat(uint16_t keycode, keyrecord_t* record) {
 
     // Determine whether the key is a letter.
     switch (keycode) {
-        case HOME_A ... HOME_O:
-        case KC_A ... KC_0:
         case KC_MINUS ... KC_SLASH:
-        case S(KC_A) ... S(KC_0):
+        case S(KC_9) ... S(KC_0):
         case S(KC_MINUS) ... S(KC_SLASH):
             last_keycode = keycode;
             break;
