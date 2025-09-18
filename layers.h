@@ -9,4 +9,5 @@ enum custom_layers {
     _NUMS,
     _NAV,
     _SYS,
+    _SYMBOLS,
 };

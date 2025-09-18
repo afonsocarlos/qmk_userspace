@@ -15,6 +15,8 @@ enum custom_keycodes {
     HOME_I,
     HOME_O,
 
+    SYM_Z,
+
     SMTD_KEYCODES_END,
 
     // Accent keys
