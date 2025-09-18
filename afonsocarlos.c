@@ -42,11 +42,11 @@ void on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap_count) {
     switch (keycode) {
         SMTD_MT(HOME_A, KC_A, HOME_GUI, 2)
         SMTD_MT(HOME_R, KC_R, KC_LALT, 2)
-        SMTD_MT(HOME_S, KC_S, HOME_CTRL, 2)
-        SMTD_MT(HOME_T, KC_T, KC_LSFT, 2)
+        SMTD_MT(HOME_S, KC_S, HOME_CTRL, 3)
+        SMTD_MT(HOME_T, KC_T, KC_LSFT, 3)
 
-        SMTD_MT(HOME_N, KC_N, KC_RSFT, 2)
-        SMTD_MT(HOME_E, KC_E, HOME_CTRL, 2)
+        SMTD_MT(HOME_N, KC_N, KC_RSFT, 3)
+        SMTD_MT(HOME_E, KC_E, HOME_CTRL, 3)
         SMTD_MT(HOME_I, KC_I, KC_LALT, 2)
         SMTD_MT(HOME_O, KC_O, HOME_GUI, 2)
     }
@@ -61,7 +61,7 @@ uint32_t get_smtd_timeout(uint16_t keycode, smtd_timeout timeout) {
             if (timeout == SMTD_TIMEOUT_RELEASE) return 3;
             if (timeout == SMTD_TIMEOUT_SEQUENCE) return 150;
         case HOME_O:
-            if (timeout == SMTD_TIMEOUT_TAP) return 600;
+            if (timeout == SMTD_TIMEOUT_TAP) return 900;
             if (timeout == SMTD_TIMEOUT_RELEASE) return 1;
             if (timeout == SMTD_TIMEOUT_SEQUENCE) return 150;
     }
