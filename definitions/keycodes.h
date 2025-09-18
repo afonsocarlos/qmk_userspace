@@ -40,6 +40,7 @@ enum custom_keycodes {
     KC_TEQL, // === Triple equals to
     KC_NEQL, // != Not equals to
     KC_GEQT, // >= Greater than or equal to
+    KC_NLSF, // ¬ Null safe operator
     KC_TARW, // -> Thin Arrow
     KC_FARW, // => Fat Arrow
     KC_DCLN, // :: Double colon
