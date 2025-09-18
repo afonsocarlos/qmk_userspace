@@ -343,12 +343,16 @@ const key_override_t semicolon_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_C
 const key_override_t colon_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, KC_COLN);
 const key_override_t pipe_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_SLSH, KC_PIPE);
 const key_override_t question_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_QUES, KC_EXLM);
+const key_override_t left_parenthesis_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_LPRN, KC_LABK);
+const key_override_t right_parenthesis_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_RPRN, KC_RABK);
 
 // This globally defines all key overrides to be used
 const key_override_t *key_overrides[] = {
     &semicolon_key_override,
     &colon_key_override,
     &pipe_key_override,
-    &question_key_override
+    &question_key_override,
+    &left_parenthesis_key_override,
+    &right_parenthesis_key_override
 };
 #endif // KEY_OVERRIDES

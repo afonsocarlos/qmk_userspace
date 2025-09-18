@@ -13,6 +13,7 @@ BOOTMAGIC_ENABLE     = yes
 CAPS_WORD_ENABLE     = yes
 COMBO_ENABLE         = yes
 DEFERRED_EXEC_ENABLE = yes
+EXTRAKEY_ENABLE      = yes
 KEY_OVERRIDE_ENABLE  = yes
 LAYER_LOCK_ENABLE    = yes
 LEADER_ENABLE        = yes
@@ -21,9 +22,8 @@ MAGIC_ENABLE         = yes
 MOUSEKEY_ENABLE      = yes
 NO_USB_STARTUP_CHECK = yes
 OS_DETECTION_ENABLE  = yes
-EXTRAKEY_ENABLE = yes
-SPLIT_KEYBOARD = yes
-UNICODE_ENABLE = yes
+SPLIT_KEYBOARD       = yes
+UNICODE_ENABLE       = yes
 
 #Dont use
 AUDIO_ENABLE       = no
